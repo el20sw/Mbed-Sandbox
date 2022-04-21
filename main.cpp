@@ -28,9 +28,8 @@ class led1_class {
             _green_led_pin -> write(0);
             _state = 0;
             //Initialise interrupt button
-            _button -> rise(callback(&_green_led_pin, &led1_class::class_isr1));
+            _button -> rise(callback(this, &led1_class::class_isr1));
             _button -> mode(PullNone);
-
         }
 
         void ButtonISR() {
@@ -66,7 +65,7 @@ class led2_class {
             _red_led_pin -> write(0);
             _state = 0;
             //Initialise ticker
-            _ticker -> attach(callback(&_red_led_pin, &led2_class::class_isr2), 500ms);
+            _ticker -> attach(callback(this, &led2_class::class_isr2), 500ms);
         }
 
         void TickerISR() {
@@ -92,7 +91,6 @@ class led2_class {
 //Instantiate Class objects
 led1_class class_led1(PA_13, PC_10);
 led2_class class_led2(PA_14);
-
 
 int main()
 {
