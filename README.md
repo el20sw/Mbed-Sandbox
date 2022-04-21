@@ -1,2 +1,2 @@
-# Mbed-Sandox
+# Mbed-Sandbox
 Mbed Sandbox for testing purposes
