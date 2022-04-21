@@ -10,7 +10,9 @@ int main()
 {
     while (true) {
 
+        //Call ISR method for led1
         class_led1.ButtonISR();
+        //Call ISR method for led2
         class_led2.TickerISR();
 
         sleep();
