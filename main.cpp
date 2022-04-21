@@ -3,7 +3,9 @@
 InterruptIn button(PC_10);
 Ticker ticker;
 
+// Green LED
 DigitalOut led1(PA_13);
+// Red LED
 DigitalOut led2(PA_14);
 
 volatile int g_ISR_flag_1 = 0;
