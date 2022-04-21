@@ -37,8 +37,6 @@ class led1_class {
     
     private:
         DigitalOut *_green_led_pin;
-        //Ticker classticker;
-
         int _state;
 };
 
@@ -64,8 +62,6 @@ class led2_class {
     
     private:
         DigitalOut *_red_led_pin;
-        //Ticker classticker;
-
         int _state;
 };
 
